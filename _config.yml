@@ -1,0 +1,33 @@
+# Jekyll configuration for GitHub Pages
+title: "上海吉斯普机械设备有限公司"
+description: "工业过程自动化仪表专家"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+# Build settings
+theme: null
+plugins: []
+
+# Exclude from processing
+exclude:
+  - README.md
+  - CNAME
+  - .nojekyll
+  - favicon.html
+
+# Include all files
+include:
+  - "_*"
+  - "*.html"
+  - "*.css"
+  - "*.js"
+  - "images/"
+  - "css/"
+  - "js/"
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: null
