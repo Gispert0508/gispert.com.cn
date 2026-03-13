@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .favicon-preview { display: flex; gap: 20px; margin: 20px 0; }
+        .icon-box { width: 64px; height: 64px; background: #0066cc; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; border-radius: 8px; }
+        .code { background: #f5f5f5; padding: 10px; border-radius: 5px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>网站Favicon设置</h1>
+    <p>Favicon是浏览器标签页上显示的小图标。你可以使用以下方法：</p>
+    
+    <h2>选项1：使用简单文字图标</h2>
+    <div class="favicon-preview">
+        <div class="icon-box">G</div>
+        <div class="icon-box">吉</div>
+    </div>
+    
+    <h2>选项2：使用公司logo的一部分</h2>
+    <p>从logo.png中截取一部分作为favicon</p>
+    
+    <h2>选项3：设计专用favicon</h2>
+    <p>可以设计一个简单的图标，建议尺寸：16x16, 32x32, 64x64像素</p>
+    
+    <h2>HTML代码（添加到每个页面的&lt;head&gt;中）</h2>
+    <div class="code">
+&lt;link rel="icon" type="image/x-icon" href="favicon.ico"&gt;<br>
+&lt;link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"&gt;<br>
+&lt;link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"&gt;<br>
+&lt;link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"&gt;
+    </div>
+    
+    <h2>建议</h2>
+    <p>暂时可以先不设置favicon，等网站上线后再添加。或者使用一个简单的蓝色方块图标。</p>
+</body>
+</html>
