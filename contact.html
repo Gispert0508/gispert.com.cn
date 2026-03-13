@@ -272,21 +272,47 @@
             this.reset();
         });
         
-        // 地图初始化（需要实际地址才能显示）
+        // 地图初始化 - 公司位置：上海市松江区泗砖公路777号
         document.addEventListener('DOMContentLoaded', function() {
-            // 这里可以初始化Leaflet地图
-            // 需要实际地址坐标才能显示地图
-            /*
-            const map = L.map('map').setView([31.2304, 121.4737], 13); // 上海坐标
-            
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; OpenStreetMap contributors'
-            }).addTo(map);
-            
-            L.marker([31.2304, 121.4737]).addTo(map)
-                .bindPopup('上海吉斯普机械设备有限公司')
-                .openPopup();
-            */
+            try {
+                // 初始化地图，中心点设置为公司位置
+                const map = L.map('map').setView([31.085, 121.215], 15);
+                
+                // 使用OpenStreetMap地图瓦片
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                    maxZoom: 19
+                }).addTo(map);
+                
+                // 添加公司位置标记
+                const companyMarker = L.marker([31.085, 121.215]).addTo(map);
+                
+                // 标记弹出信息
+                companyMarker.bindPopup(`
+                    <div style="text-align: center;">
+                        <strong>上海吉斯普机械设备有限公司</strong><br>
+                        <small>GISPERT Mining Machinery Co., Ltd.</small><br><br>
+                        <i class="fas fa-map-marker-alt"></i> 上海市松江区泗砖公路777号<br>
+                        <i class="fas fa-phone"></i> +86 13122208950<br>
+                        <i class="fas fa-envelope"></i> jc-sun@gispert.com.cn
+                    </div>
+                `);
+                
+                // 默认打开弹出窗口
+                companyMarker.openPopup();
+                
+                console.log('地图初始化成功');
+            } catch (error) {
+                console.error('地图初始化失败:', error);
+                document.getElementById('map').innerHTML = `
+                    <div style="text-align: center; padding: 50px;">
+                        <i class="fas fa-map-marked-alt" style="font-size: 48px; color: #ccc;"></i>
+                        <h3>地图加载失败</h3>
+                        <p>公司地址：上海市松江区泗砖公路777号</p>
+                        <p>联系电话：+86 13122208950</p>
+                    </div>
+                `;
+            }
         });
     </script>
     <script src="js/main.js"></script>
