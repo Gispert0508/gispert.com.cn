@@ -426,3 +426,144 @@ body {
     color: white;
     border-color: var(--accent-blue);
 }
+
+/* 品牌元信息样式 */
+.brand-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 10px 0 15px;
+    color: var(--medium-gray);
+    font-size: 14px;
+}
+
+.brand-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.brand-meta i {
+    color: var(--accent-blue);
+}
+
+/* 品牌技术特点 */
+.brand-technical {
+    margin: 15px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    border-left: 3px solid var(--secondary-blue);
+}
+
+.brand-technical h4 {
+    color: var(--secondary-blue);
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.brand-technical ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.brand-technical li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.brand-technical li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* 产品分类网格 */
+.products-grid-mini {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.product-category {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+}
+
+.product-category h5 {
+    color: var(--secondary-blue);
+    margin-bottom: 10px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.product-category ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.product-category li {
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+}
+
+.product-category li:last-child {
+    border-bottom: none;
+}
+
+/* 成功案例 */
+.case-studies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.case-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: #f0f8ff;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.case-item i {
+    color: var(--secondary-blue);
+    font-size: 14px;
+    min-width: 20px;
+}
+
+/* 产品标签样式 */
+.product-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.product-tag {
+    background: #e8f4ff;
+    color: var(--secondary-blue);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    border: 1px solid #cce5ff;
+}
+
+.product-tag:hover {
+    background: var(--accent-blue);
+    color: white;
+    border-color: var(--accent-blue);
+}
