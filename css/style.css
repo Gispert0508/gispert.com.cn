@@ -392,3 +392,37 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* 品牌应用标签样式 */
+.brand-applications {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.brand-applications h4 {
+    color: var(--secondary-blue);
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.application-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: #f0f8ff;
+    color: var(--secondary-blue);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    border: 1px solid #cce5ff;
+}
+
+.tag:hover {
+    background: var(--accent-blue);
+    color: white;
+    border-color: var(--accent-blue);
+}
